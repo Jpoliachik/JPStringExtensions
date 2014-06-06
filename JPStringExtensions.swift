@@ -14,6 +14,10 @@ extension String {
         return (self as NSString).containsString(searchString)
     }
     
+    func containsCaseInsensitive(searchString: String) -> Bool {
+        return (self.lowercaseString as NSString).containsString(searchString.lowercaseString);
+    }
+    
     func trimmed(input: String) -> String{
         var charactersToTrim:NSCharacterSet = NSCharacterSet.whitespaceAndNewlineCharacterSet()
         return (self as NSString).stringByTrimmingCharactersInSet(charactersToTrim)
