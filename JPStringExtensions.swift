@@ -18,9 +18,11 @@ extension String {
         return (self.lowercaseString as NSString).containsString(searchString.lowercaseString);
     }
     
-    func trimmed(input: String) -> String{
+    func trimmed() -> String {
         var charactersToTrim:NSCharacterSet = NSCharacterSet.whitespaceAndNewlineCharacterSet()
         return (self as NSString).stringByTrimmingCharactersInSet(charactersToTrim)
     }
     
 }
+
+
